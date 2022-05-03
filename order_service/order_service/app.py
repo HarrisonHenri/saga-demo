@@ -12,14 +12,14 @@ from saga_framework import SyncStep, \
     AsyncStep, BaseStep, AbstractSagaStateRepository, StatefulSaga
 from sqlalchemy_mixins import AllFeaturesMixin, TimestampsMixin
 
-from order_service.app_common import settings
-from order_service.app_common.messaging import consumer_service_messaging, \
+from app_common import settings
+from app_common.messaging import consumer_service_messaging, \
     accounting_service_messaging, restaurant_service_messaging
-from order_service.app_common.messaging.accounting_service_messaging import \
+from app_common.messaging.accounting_service_messaging import \
     authorize_card_message
-from order_service.app_common.messaging.consumer_service_messaging import \
+from app_common.messaging.consumer_service_messaging import \
     verify_consumer_details_message
-from order_service.app_common.messaging.restaurant_service_messaging import \
+from app_common.messaging.restaurant_service_messaging import \
     create_ticket_message, reject_ticket_message, approve_ticket_message
 
 logging.basicConfig(level=logging.DEBUG)

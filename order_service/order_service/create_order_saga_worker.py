@@ -1,8 +1,8 @@
 from celery import Celery
 from saga_framework import close_sqlalchemy_db_connection_after_celery_task_ends
 
-from order_service.app_common import settings
-from order_service.app_common.messaging import CREATE_ORDER_SAGA_RESPONSE_QUEUE
+from app_common import settings
+from app_common.messaging import CREATE_ORDER_SAGA_RESPONSE_QUEUE
 from .app import CreateOrderSaga, db, CreateOrderSagaRepository
 
 create_order_saga_responses_celery_app = Celery(

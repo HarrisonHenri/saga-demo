@@ -19,7 +19,7 @@ RUN pip install saga-framework==0.1
 # copy the content of the local src directory to the working directory
 COPY ./order_service/run_worker.sh .
 COPY ./order_service/order_service order_service
-COPY ./app_common order_service/app_common
+COPY ./app_common app_common
 
 # command to run on container start
 ENV PYTHONPATH=.
